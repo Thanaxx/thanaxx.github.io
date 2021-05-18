@@ -1,0 +1,52 @@
+.bmiContainer{
+    width: 25%;
+    max-height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+}
+.bmiContainer p{
+    font-size: 20px;
+    font-weight: bolder;
+    background: linear-gradient(to right, rgb(102, 82, 15), rgb(110, 242, 252));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+input[type="text"]{
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px 10px;
+    border-bottom: 1px solid white;
+    box-shadow: none;
+    text-align: center;
+    font-size: 18;
+}
+.Answer{
+    text-align: center;
+    padding: 10px 0;
+    background: linear-gradient(to right, rgb(102, 82, 15), rgb(110, 242, 252));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bmiAns{
+    padding: 10px 20px;
+    border: none;
+    outline:none;
+    width: 100%;
+    border-radius: 15px;
+    background: linear-gradient(to left,  rgb(102, 82, 15), rgb(110, 242, 252));
+    color: #05312f;
+    font-size: 17px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+input[type="text"]:focus{
+    border-bottom: 2px solid lightgreen;
+}
+#reminder{
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+}

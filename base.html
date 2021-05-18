@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./basestyle.css">
+    <link rel="stylesheet" type="text/css" href="./cssFontawesome/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./calculatorPage.css">
+    <link rel="stylesheet" type="text/css" href="./calendar.css">
+    <link rel="stylesheet" type="text/css" href="./notess.css">
+    <link rel="stylesheet" type="text/css" href="./timer.css">
+    <link rel="stylesheet" type="text/css" href="./bmistyle.css">
+    <link rel="stylesheet" type="text/css" href="./webfonts/fa-regular-400.svg">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="navigation">
+            <nav class="navi">
+                <input class="search" type="search" placeholder="search">
+                <button type="submit" class="sub">
+                    <i class="fa fa-search"></i>
+                </button>
+            </nav>
+        </div>
+
+        <div class="app-body" id="appB">
+            <div class="app-top">
+                <div class="iconA">
+                    <button class="calculator-icon" onclick="calculator()">
+                        <i class="fa fa-10x fa-calculator"></i>
+                    </button>
+                    <br>
+                    <span class="icon-lbl">CALCULATOR</span>
+                </div>
+    
+                <div class="iconB">
+                    <button class="calendar-icon" onclick="calendarr()">
+                        <i class="fa fa-10x fa-calendar-check"></i>
+                    </button>
+                    <br>
+                    <span class="icon-lbl">CALENDAR</span>
+                </div>
+    
+                <div class="iconC">
+                    <button class="bmi-icon" onclick="BMI()">
+                        <i class="fa fa-10x fa-balance-scale"></i>
+                    </button>
+                    <br>
+                    <span class="icon-lbl">BMI CALCULATOR</span>
+                </div>
+            </div>
+
+            <div class="app-bottom">
+                <div class="iconD">
+                    <button class="timer-icon" onclick="timerA()">
+                        <i class="fa fa-10x fa-clock"></i>
+                    </button>
+                    <br>
+                    <span class="icon-lbl">TIMER</span>
+                </div>
+    
+                <div class="iconE">
+                    <button class="notes-icon" onclick="notes()">
+                        <i class="fa fa-10x fa-sticky-note"></i>
+                    </button>
+                    <br>
+                    <span class="icon-lbl">NOTES</span>
+                </div>
+                
+                <div class="iconF">
+                    <button class="weather-icon">
+                        <i class="fa fa-10x fa-bolt"></i>
+                    </button>
+                    <br>
+                    <span class="icon-lbl">WEATHER</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="app-bottom-nav">
+            <div class="bottom">
+            <a href="#" onclick="home()"><i class="fa fa-2x fa-th-large"></i></a>
+            <a href="#" onclick="contact()"><i class="fa fa-2x fa-envelope"></i></a>
+            <a href="#" onclick="setting()"><i class="fa fa-2x fa-cogs"></i></a>
+            </div>
+        </div>
+
+
+        <!--New pages once button is clicked-->
+
+        <!--CALCULATOR PAGE-->
+        <div class="calculator-page" id="calcuu" style="display: none;">
+            <div class="calculator-app">
+                <div id="calc-top-result">
+                    <div data-previous-operand class="previousOperand"></div>
+                    <div data-current-operand class="currentOperand"></div>
+                </div>
+                <div class="calc-keyboard">
+                    <button data-all-clear class="clear-operator">C</button>
+                    <button data-delete class="back-operator">CE</button>
+                    <button data-number class="operators">.</button>
+                    <button data-operation class="operators">/</button>
+                    <button data-number class="numbers">7</button>
+                    <button data-number class="numbers">8</button>
+                    <button data-number class="numbers">9</button>
+                    <button data-operation class="operators">*</button>
+                    <button data-number class="numbers">4</button>
+                    <button data-number class="numbers">5</button>
+                    <button data-number class="numbers">6</button>
+                    <button data-operation class="operators">-</button>
+                    <button data-number class="numbers">1</button>
+                    <button data-number class="numbers">2</button>
+                    <button data-number class="numbers">3</button>
+                    <button data-operation class="operators">+</button>
+                    <button data-number class="empty "></button>
+                    <button data-number class="numbers">0</button>
+                    <button data-number class="empty"></button>
+                    <button data-equals class="equal-operator">=</button>
+                </div>
+            </div>
+        </div>
+
+        <!--CALENDAR-->
+        <div class="calendar-page" id="calendar" style="display: none;">
+            calendar ah
+        </div>
+
+
+        <!--NOTES-->
+        <div class="notes-page" id="notes" style="display: none;">
+            <h1>New Todo</h1>
+            <div class="todo-list">
+                <input type="text" placeholder="Enter list" class="note">
+                <button class="addListButton" onclick="addFunction()">
+                    <i class="fas fa-plus-square"></i>
+                </button>
+            </div>
+
+
+            <div class="todo-container">
+                
+            </div>
+        </div>
+
+        <!--https://www.youtube.com/watch?v=oY8V6GuZrkM-->
+        <!--TIMER /STOPWATCH-->
+        <div class="timer" id="timee" style="display: none;">
+            <div class="timeControls">
+                <button onclick="start()">START</button>
+                <button onclick="pause()">PAUSE</button>
+                <button onclick="stop()">STOP</button>
+                <button onclick="restart()">RESTART</button>
+                <button onclick="lap()">LAP</button>
+                <button onclick="resetLapse()">RESET LAPS</button>
+            </div>
+            <div class="stopwatchPart">00:00:00</div>
+            <ul class="laps"><h1></h1></ul>
+        </div>
+
+        <!--BMI-->
+        <div class="bmi-page" id="bmi" style="display: none;">
+            <div class="bmiContainer">
+                <p>Height</p>
+                <input type="text" class="height">
+                <p>Weight</p>
+                <input type="text" class="weight">
+                <p class="Answer" id="aa"></p>
+                <button class="bmiAns" onclick="solve()">Calculate</button>
+                <p id="reminder">Please enter height[cm] & weight[kg]</p>
+            </div>
+        </div>
+
+
+
+        <!--CONTACTS-->
+        <div class="contacts" id="contactss" style="display: none;">
+            <h1>CONTACTS</h1>
+        </div>
+
+        <div class="settings" id="settingss" style="display: none;">
+            <h1>SETTINGS</h1>
+        </div>
+
+    </div>
+</body>
+<script src="./basemove.js"></script>
+<script src="./calculate.js"></script>
+<script src="./notes.js"></script>
+<script src="./timerR.js"></script>
+<script src="./bmii.js"></script>
+</html>

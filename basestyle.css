@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+   background-color: white;
+}
+.app-wrapper{ /*body of the page*/
+    min-height: 635px;
+    background: #003d36;
+}
+
+
+/*TOP PART*/
+.navigation{
+    width:100%;
+    height: 55px;
+}
+.navi{
+    float: right;
+    margin: 10px;
+}
+.search, .sub{
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: #003d36;
+  color: white;
+  font-size: 20px;
+  box-shadow: 5px 5px 10px #00302a,
+     -5px -5px 10px #004a42;
+}
+.sub:hover{
+    background-color: #e0904583;
+}
+
+
+
+/*app body*/
+.app-body{
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding:20px 100px;
+}
+
+.app-top{
+    display: flex;
+}
+.app-top > div{
+    flex: 1;
+    margin:5px 40px;
+    padding: 20px;
+    min-height: 200px;
+}
+
+.app-bottom{
+    display: flex;
+}
+.app-bottom > div{
+    flex: 1;
+    margin:5px 40px;
+    padding: 20px;
+    min-height: 200px;
+}
+
+/*buttons top*/
+.calculator-icon, .calendar-icon, .bmi-icon{
+    padding: 10px 50px;
+    background-color: rgba(6, 59, 59, 0.411);
+    color: #ffffffbb;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 56px;
+    background: #003d36;
+    box-shadow: inset 5px 5px 10px #00302a, 
+            inset -5px -5px 10px #004a42;
+}
+.bmi-icon{
+    padding: 10px 25px;
+}
+
+/*buttons down*/
+.timer-icon, .notes-icon, .weather-icon{
+    padding: 10px 50px;
+    color: #ffffffbb;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 56px;
+    border-radius: 56px;
+    background: #003d36;
+    box-shadow: inset 5px 5px 10px #00302a, 
+            inset -5px -5px 10px #004a42;
+}
+.timer-icon{
+    padding: 10px 42px;
+}
+.weather-icon{
+    padding: 10px 66px;
+}
+.icon-lbl{
+    color: rgb(214, 255, 255);
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 20px;
+}
+.calculator-icon:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(1, 78, 72);
+}
+
+
+
+/*bottom nav - bottom icons*/
+.app-bottom-nav{
+    width: 100%;
+    height: 75px;
+    background-color: #ffffffbb;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    
+}
+.bottom a{
+    text-decoration-line: none;
+    font-size: 18px;
+    color: #003d36;
+}
+.label, .labelb, .labelc{
+    display: block;
+    color: rgba(83, 83, 83, 0.733);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+/*responsive*/
+@media (max-width: 700px){
+    .app-top{
+        flex-direction: column;
+    }
+    .app-bottom{
+        flex-direction: column;
+    }
+}
+
+
+/*newpage*/
+.calculator-page{
+    background-color: rgb(156, 148, 141);
+    height: 600px;
+}

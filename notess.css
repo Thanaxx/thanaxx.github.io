@@ -1,0 +1,63 @@
+.notes-page{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.notes-page h1{
+    color: #adadad;
+}
+.todo-list{
+    padding: 5px;
+}
+input[type="text"]{
+    padding:6px 10px;
+    width: 80%;
+    font-size: 18px;
+    border: 1px solid black;
+    outline: none;
+    background-color: #9b9a9a00;
+    color: #adadad;
+    border: none;
+    box-shadow: 5px 5px 10px #00302a,
+    -5px -5px 10px #004a42;
+    font-weight: bold;
+}
+.addListButton{
+    padding:8px 10px;
+    background-color: #003d36;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 10px #00302a,
+    -5px -5px 10px #004a42;
+    cursor: pointer;
+}
+.addListButton i {
+    color: #adadad;
+}
+
+/*TODO-LIST OUTPUT*/
+.todo-container{
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+}
+.element{
+    background-color: #8ea7a5e0;
+    padding: 7px 8px;
+    margin: 10px;
+    box-shadow: 5px 5px 10px #00302a,
+    -5px -5px 10px #004a42;
+    border-radius: 7px;
+    text-align: left;
+}
+.dell i{
+    font-size: 20px;
+}
+.dell{
+    background-color: #8ea7a5e0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #003d36;
+    float: right;
+}
